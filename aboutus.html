@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | 91.6 KDM Gold</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        a{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    padding: 0 20px; 
+}
+header a{
+    color: #00fff7;
+    margin-right: 40px;
+    font-weight: 700;
+    font-size: larger;
+}
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+
+    header a {
+        margin-right: 20px;
+        font-size: medium;
+    }
+}
+
+/* Media Query for Mobile Devices (landscape mode) */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+
+    header a {
+        margin-right: 15px;
+        font-size: medium;
+    }
+}
+
+/* Media Query for Mobile Devices (portrait mode) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 5px;
+    }
+
+    header a {
+        margin-right: 10px;
+        font-size: small;
+    }
+}
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .content-section .text {
+            width: 60%;
+        }
+        .content-section img {
+            width: 35%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .content-section p {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .quality-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .quality-section h2 {
+            font-size: 2.2em;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .quality-section p {
+            font-size: 1.1em;
+        }
+        .contact-button {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px;
+            background-color: #d4af37;
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 5px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .contact-button:hover {
+            background-color: #b59731;
+        }
+        /* footer */
+footer{
+    background-color: #000000ff;
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 3rem 1rem;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+hr{
+    border: 1px solid #3333338e;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col{
+    min-width: 250px;
+    color:#f2f2f2f2;
+    font-family: poppins;
+    padding:0 2rem;
+    text-decoration-line: none;
+}
+.col .logo{
+    width: 100px;
+    margin-bottom:25px;
+}
+.col h3{
+    color:#ff014fff;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.col h3::after{
+    content: '';
+    height:3px;
+    width:0px;
+    background-color: #ff014fff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+    width:30px
+}
+.col .social a i{
+    color:#ff014fff;
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.col .links a::before{
+    content:'';
+    height: 16px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: #ff014fff;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:#ff014fff;
+}
+.col .contact-details{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+.contact-details p {
+    color: #fffffffe; 
+}
+
+.row .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem 0;
+}
+.row .form input{
+    background-color: #1a1c20ff;
+    border:0;
+    outline:none;
+    padding:14px 20px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form button{
+    padding:14px 20px;
+    border:0;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ff014fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+/********** Responsive Design ********/
+@media(max-width:900px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 25px;
+ }
+}
+@media(max-width:768px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 20px;
+ }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="./index.html">HOME</a>
+            <a href="./aboutus.html">ABOUT</a>
+            <a href="./commingsoon.html">PRODUCTS</a>
+            <a href="./gallery.html">GALLERY</a>
+            <a href="./contactus.html">CONTACT</a>
+        </nav>
+    </header>
+
+<div class="container">
+    <div class="content-section">
+        <div class="text">
+            <h2>91.6 KDM Gold - Tailored for You</h2>
+            <p>
+                With over 30 years of experience in the gold industry, we at <strong>91.6 KDM Gold</strong> pride ourselves on delivering high-quality, personalized jewelry to each of our valued customers.
+                Our expertise in crafting custom gold pieces has made us a trusted name in the business, ensuring each product is of the finest quality.
+            </p>
+            <p>
+                We specialize in 91.6 KDM gold, known for its impeccable purity and strength. Every piece of gold jewelry is tailor-made with precision, offering a blend of traditional craftsmanship and modern designs.
+                Whether you're looking for a timeless heirloom or something more contemporary, we have something for everyone.
+            </p>
+        </div>
+        <img src="./images/galleryimages/imgg17.jpg" alt="91.6 KDM Gold Jewelry">
+    </div>
+
+    <div class="quality-section">
+        <h2>Why Choose Us?</h2>
+        <p>
+            We ensure the highest quality standards with every product, from material selection to the final polish. Our commitment to excellence ensures that you receive only the best 91.6 KDM gold, crafted with skill and precision.
+        </p>
+        <p>
+            With 30 years of trusted service, our experience in the industry speaks for itself. We offer:
+        </p>
+        <ul>
+            <li>Customized designs to suit your taste</li>
+            <li>Expert craftsmanship passed down through generations</li>
+            <li>Unmatched customer service and support</li>
+        </ul>
+    </div>
+
+    <a href="contactus.html" class="contact-button">Contact Us</a>
+</div>
+
+ <!-- footer -->
+ <footer>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="company">
+                <img src="images/logo.png" alt="" class="logo">
+                <a href="./new.html"><h3>Ganesh Gold Works</h3></a>
+                <p>
+                    Get in touch with us | We are specialized in designings, and Tailor made Jewellers.
+                </p>
+                <div class="social">
+                    <a href="https://www.facebook.com/ganesh.chary.14/"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+
+            <div class="col" id="services">
+                <h3>OUR PROMISES</h3>
+                <div class="links">
+                    <a href="#">100% Hallmarked Jewellery</a>
+                    <a href="#">Easy Exchange</a>
+                    <a href="#">Detailed Product Pricing</a>
+                    <a href="#">Lifetime Product Support</a>
+                </div>
+            </div>
+
+            <div class="col" id="useful-links">
+                <h3>LINKS</h3>
+                <div class="links">
+                    <a href="./privacy.html">Privacy Policy</a>
+                    <a href="#">Return Policy</a>
+                    <a href="./terms.html">Terms & Conditions</a>
+                    <a href="./faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <div class="col" id="contact">
+                <h3>REACH US</h3>
+                <div class="contact-details">
+                    <i class="fa fa-location"></i>
+                    <a href="./contactus.html"><p>H NO. 999-8-0002 <br>Raigadda,Wanaparthy <br>509103 <br>Daily, 10:00 am - 6:00 pm <br>Every Tuesday Holiday</p></a>
+                    
+                </div>
+                <div class="contact-details">
+                    <i class="fa fa-phone"></i>
+                    <p>+91-9701462139<br>
+                    +91-8328086134</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer-bottom"></div>
+        <p>&copy; 2024 Ganesh Gold Works. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Ganesh Goldworks</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    padding: 0 20px; 
+}
+header a{
+    color: #00fff7;
+    margin-right: 40px;
+    font-weight: 700;
+    font-size: larger;
+}
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+
+    header a {
+        margin-right: 20px;
+        font-size: medium;
+    }
+}
+
+/* Media Query for Mobile Devices (landscape mode) */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 10px;
+    }
+
+    header a {
+        margin-right: 15px;
+        font-size: medium;
+    }
+}
+
+/* Media Query for Mobile Devices (portrait mode) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 5px;
+    }
+
+    header a {
+        margin-right: 10px;
+        font-size: small;
+    }
+}
+        h1, h2 {
+            color: #f5a623;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #666;
+        }
+        a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+        /* footer */
+footer{
+    background-color: #000000ff;
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 3rem 1rem;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+hr{
+    border: 1px solid #3333338e;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col{
+    min-width: 250px;
+    color:#f2f2f2f2;
+    font-family: poppins;
+    padding:0 2rem;
+    text-decoration-line: none;
+}
+.col .logo{
+    width: 100px;
+    margin-bottom:25px;
+}
+.col h3{
+    color:#ff014fff;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.col h3::after{
+    content: '';
+    height:3px;
+    width:0px;
+    background-color: #ff014fff;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+    width:30px
+}
+.col .social a i{
+    color:#ff014fff;
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(25);
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.col .links a::before{
+    content:'';
+    height: 16px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: #ff014fff;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:#ff014fff;
+}
+.col .contact-details{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+.contact-details p {
+    color: #fffffffe; 
+}
+
+.row .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem 0;
+}
+.row .form input{
+    background-color: #1a1c20ff;
+    border:0;
+    outline:none;
+    padding:14px 20px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form button{
+    padding:14px 20px;
+    border:0;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ff014fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+/********** Responsive Design ********/
+@media(max-width:900px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 25px;
+ }
+}
+@media(max-width:768px)
+{
+ .row{
+   flex-direction: column;
+ }
+ .col{
+   width: 100%;
+   text-align: left;
+   margin-bottom: 20px;
+ }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">HOME</a>
+            <a href="./aboutus.html">ABOUT</a>
+            <a href="./commingsoon.html">PRODUCTS</a>
+            <a href="./gallery.html">GALLERY</a>
+            <a href="./contactus.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>1. Introduction</h2>
+        <p>By accessing this website, you agree to be bound by these Terms and Conditions. If you disagree with any part of the terms, you may not use our services.</p>
+
+        <h2>2. Intellectual Property</h2>
+        <p>All content provided on this website is owned by Ganesh Goldworks and is protected under copyright law. You may not modify, reproduce, or distribute any part of this website without our consent.</p>
+
+        <h2>3. User Obligations</h2>
+        <ul>
+            <li>You must not misuse this website or encourage any unlawful activities.</li>
+            <li>You must provide accurate personal information when necessary.</li>
+            <li>You agree not to attempt to gain unauthorized access to any section of the website or disrupt its operations.</li>
+        </ul>
+
+        <h2>4. Privacy Policy</h2>
+        <p>Your privacy is important to us. Please read our <a href="privacy.html">Privacy Policy</a> for information on how we collect, use, and share your personal data.</p>
+
+        <h2>5. Returns and Refunds</h2>
+        <p>At Ganesh Goldworks, we strive to ensure that our customers are fully satisfied. Returns and refunds are subject to the specific terms stated in our Refund Policy. Please refer to that section for more information.</p>
+
+        <h2>6. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms and Conditions at any time. Any changes will be posted on this page, and you are encouraged to review them regularly.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions regarding these Terms and Conditions, please reach out via our <a href="contactus.html">Contact Us</a> page.</p>
+    </section>
+
+     <!-- footer -->
+     <footer>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col" id="company">
+                    <img src="images/logo.png" alt="" class="logo">
+                    <a href="./new.html"><h3>Ganesh Gold Works</h3></a>
+                    <p>
+                        Get in touch with us | We are specialized in designings, and Tailor made Jewellers.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/ganesh.chary.14/"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+
+                <div class="col" id="services">
+                    <h3>OUR PROMISES</h3>
+                    <div class="links">
+                        <a href="#">100% Hallmarked Jewellery</a>
+                        <a href="#">Easy Exchange</a>
+                        <a href="#">Detailed Product Pricing</a>
+                        <a href="#">Lifetime Product Support</a>
+                    </div>
+                </div>
+
+                <div class="col" id="useful-links">
+                    <h3>LINKS</h3>
+                    <div class="links">
+                        <a href="./privacy.html">Privacy Policy</a>
+                        <a href="#">Return Policy</a>
+                        <a href="./terms.html">Terms & Conditions</a>
+                        <a href="./faq.html">FAQ</a>
+                    </div>
+                </div>
+
+                <div class="col" id="contact">
+                    <h3>REACH US</h3>
+                    <div class="contact-details">
+                        <i class="fa fa-location"></i>
+                        <a href="./contactus.html"><p>H NO. 999-8-0002 <br>Raigadda,Wanaparthy <br>509103 <br>Daily, 10:00 am - 6:00 pm <br>Every Tuesday Holiday</p></a>
+                        
+                    </div>
+                    <div class="contact-details">
+                        <i class="fa fa-phone"></i>
+                        <p>+91-9701462139<br>
+                        +91-8328086134</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="footer-bottom"></div>
+            <p>&copy; 2024 Ganesh Gold Works. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
