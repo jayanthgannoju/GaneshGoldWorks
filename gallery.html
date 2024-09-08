@@ -4,318 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gold Work Gallery</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #00f84a0e;
-        }
-
-        a{
-    text-decoration: none;
-}
-a{
-    text-decoration: none;
-}
-header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    padding: 0 20px; 
-}
-header a{
-    color: #00fff7;
-    margin-right: 40px;
-    font-weight: 700;
-    font-size: larger;
-}
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 10px;
-    }
-
-    header a {
-        margin-right: 20px;
-        font-size: medium;
-    }
-}
-
-/* Media Query for Mobile Devices (landscape mode) */
-@media (max-width: 576px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 10px;
-    }
-
-    header a {
-        margin-right: 15px;
-        font-size: medium;
-    }
-}
-
-/* Media Query for Mobile Devices (portrait mode) */
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 5px;
-    }
-
-    header a {
-        margin-right: 10px;
-        font-size: small;
-    }
-}
-
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin: 20px 0;
-        }
-
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1400px;
-            margin: auto;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            border-radius: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            opacity: 0; /* Initially hide the images */
-            transform: translateX(-50px); /* Slide effect from left */
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            border-radius: 20px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 450px;
-            transition: transform 0.5s ease;
-            border-radius: 20px;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-item.in-view {
-            opacity: 1; /* Make visible when in view */
-            transform: translateX(0); /* Reset transform */
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            color: #fff;
-            font-size: 1.5rem;
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        /* Responsive adjustments */
-        @media(max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
-        @media(max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
-        /* footer */
-footer{
-    background-color: #000000ff;
-    position: relative;
-    width: 100%;
-    min-height: 350px;
-    padding: 3rem 1rem;
-}
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-hr{
-    border: 1px solid #3333338e;
-}
-.row{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.col{
-    min-width: 250px;
-    color:#f2f2f2f2;
-    font-family: poppins;
-    padding:0 2rem;
-    text-decoration-line: none;
-}
-.col .logo{
-    width: 100px;
-    margin-bottom:25px;
-}
-.col h3{
-    color:#ff014fff;
-    margin-bottom: 20px;
-    position: relative;
-    cursor: pointer;
-}
-.col h3::after{
-    content: '';
-    height:3px;
-    width:0px;
-    background-color: #ff014fff;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    transition: 0.3s ease;
-
-}
-.col h3:hover::after{
-    width:30px
-}
-.col .social a i{
-    color:#ff014fff;
-    margin-top:2rem;
-    margin-right: 5px;
-    transition: 0.3s ease;
-}
-.col .social a i:hover{
-    transform: scale(1.5);
-    filter:grayscale(25);
-}
-.col .links a{
-    display: block;
-    text-decoration: none;
-    color:#f2f2f2;
-    margin-bottom: 5px;
-    position: relative;
-    transition: 0.3s ease;
-}
-.col .links a::before{
-    content:'';
-    height: 16px;
-    width:3px;
-    position: absolute;
-    top:5px;
-    left:-10px;
-    background-color: #ff014fff;
-    transition: 0.5s ease;
-    opacity: 0;
-}
-.col .links a:hover::before{
-    opacity: 1;
-}
-.col .links a:hover{
-    transform: translateX(-8px);
-    color:#ff014fff;
-}
-.col .contact-details{
-    display: inline-flex;
-    justify-content: space-between;
-}
-.col .contact-details i{
-    margin-right:15px;
-}
-.contact-details p {
-    color: #fffffffe; 
-}
-
-.row .form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:2rem 0;
-}
-.row .form input{
-    background-color: #1a1c20ff;
-    border:0;
-    outline:none;
-    padding:14px 20px;
-    border-radius: 6px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.form button{
-    padding:14px 20px;
-    border:0;
-    border-radius: 6px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: #ff014fff;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    
-}
-
-
-/********** Responsive Design ********/
-@media(max-width:900px)
-{
- .row{
-   flex-direction: column;
- }
- .col{
-   width: 100%;
-   text-align: left;
-   margin-bottom: 25px;
- }
-}
-@media(max-width:768px)
-{
- .row{
-   flex-direction: column;
- }
- .col{
-   width: 100%;
-   text-align: left;
-   margin-bottom: 20px;
- }
-}
-    </style>
+    <link rel="stylesheet" href="./gallery.css">
 </head>
 <body>
     <header>
@@ -517,23 +206,23 @@ hr{
             <div class="overlay"></div>
         </div>
         <div class="gallery-item">
-            <img src="./images/galleryimages/imgg1.jpg" alt="Gold Design 1">
+            <img src="./images/galleryimages/imgg.jpg" alt="Gold Design 1">
             <div class="overlay"></div>
         </div>
         <div class="gallery-item">
-            <img src="./images/galleryimages/imgg1.jpg" alt="Gold Design 1">
+            <img src="./images/galleryimages/imgg.jpg" alt="Gold Design 1">
             <div class="overlay"></div>
         </div>
         <div class="gallery-item">
-            <img src="./images/galleryimages/imgg1.jpg" alt="Gold Design 1">
+            <img src="./images/galleryimages/imgg.jpg" alt="Gold Design 1">
             <div class="overlay"></div>
         </div>
         <div class="gallery-item">
-            <img src="./images/galleryimages/imgg1.jpg" alt="Gold Design 1">
+            <img src="./images/galleryimages/imgg.jpg" alt="Gold Design 1">
             <div class="overlay"></div>
         </div>
         <div class="gallery-item">
-            <img src="./images/galleryimages/imgg1.jpg" alt="Gold Design 1">
+            <img src="./images/galleryimages/imgg.jpg" alt="Gold Design 1">
             <div class="overlay"></div>
         </div>
 
@@ -601,35 +290,6 @@ hr{
             <p>&copy; 2024 Ganesh Gold Works. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Function to check if an element is in the viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        // Function to add the 'in-view' class to gallery items when they scroll into view
-        function handleScroll() {
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            galleryItems.forEach(item => {
-                if (isInViewport(item)) {
-                    item.classList.add('in-view');
-                }
-            });
-        }
-
-        // Attach scroll event listener to the window
-        window.addEventListener('scroll', handleScroll);
-
-        // Trigger scroll event to show any items already in view on load
-        window.addEventListener('load', handleScroll);
-    </script>
-
+    
 </body>
 </html>
